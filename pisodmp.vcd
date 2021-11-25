@@ -1,0 +1,407 @@
+$date
+	Wed Nov 24 20:03:44 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module piso_tb $end
+$var wire 1 ! out $end
+$var reg 1 " clear $end
+$var reg 1 # clk $end
+$var reg 4 $ in [0:3] $end
+$var reg 1 % shift $end
+$scope module p_0 $end
+$var wire 1 " clear $end
+$var wire 1 # clk $end
+$var wire 1 % control $end
+$var wire 4 & data_in [0:3] $end
+$var wire 1 ' dfr1_out $end
+$var wire 1 ! data_out $end
+$var wire 1 ( control_bar $end
+$scope module dfr1 $end
+$var wire 1 # clk $end
+$var wire 1 ) in $end
+$var wire 1 " reset $end
+$var wire 1 * reset_ $end
+$var wire 1 ' out $end
+$var wire 1 + df_in $end
+$scope module and2_0 $end
+$var wire 1 ) i0 $end
+$var wire 1 + o $end
+$var wire 1 * i1 $end
+$upscope $end
+$scope module df_0 $end
+$var wire 1 # clk $end
+$var wire 1 + in $end
+$var wire 1 ' out $end
+$var reg 1 ' df_out $end
+$upscope $end
+$scope module invert_0 $end
+$var wire 1 " i $end
+$var wire 1 * o $end
+$upscope $end
+$upscope $end
+$scope module invert_1 $end
+$var wire 1 % i $end
+$var wire 1 ( o $end
+$upscope $end
+$scope module piso_slice1 $end
+$var wire 1 " clear $end
+$var wire 1 # clk $end
+$var wire 1 % control $end
+$var wire 1 ( control_bar $end
+$var wire 1 , new $end
+$var wire 1 ' prev $end
+$var wire 1 - or_output $end
+$var wire 1 . data $end
+$scope module and_1 $end
+$var wire 1 ' i0 $end
+$var wire 1 % i1 $end
+$var wire 1 / o $end
+$upscope $end
+$scope module and_2 $end
+$var wire 1 , i0 $end
+$var wire 1 ( i1 $end
+$var wire 1 0 o $end
+$upscope $end
+$scope module dfr_1 $end
+$var wire 1 # clk $end
+$var wire 1 " reset $end
+$var wire 1 1 reset_ $end
+$var wire 1 . out $end
+$var wire 1 - in $end
+$var wire 1 2 df_in $end
+$scope module and2_0 $end
+$var wire 1 2 o $end
+$var wire 1 1 i1 $end
+$var wire 1 - i0 $end
+$upscope $end
+$scope module df_0 $end
+$var wire 1 # clk $end
+$var wire 1 2 in $end
+$var wire 1 . out $end
+$var reg 1 . df_out $end
+$upscope $end
+$scope module invert_0 $end
+$var wire 1 " i $end
+$var wire 1 1 o $end
+$upscope $end
+$upscope $end
+$scope module or_1 $end
+$var wire 1 / i0 $end
+$var wire 1 0 i1 $end
+$var wire 1 - o $end
+$upscope $end
+$upscope $end
+$scope module piso_slice2 $end
+$var wire 1 " clear $end
+$var wire 1 # clk $end
+$var wire 1 % control $end
+$var wire 1 ( control_bar $end
+$var wire 1 3 new $end
+$var wire 1 . prev $end
+$var wire 1 4 or_output $end
+$var wire 1 5 data $end
+$scope module and_1 $end
+$var wire 1 . i0 $end
+$var wire 1 % i1 $end
+$var wire 1 6 o $end
+$upscope $end
+$scope module and_2 $end
+$var wire 1 3 i0 $end
+$var wire 1 ( i1 $end
+$var wire 1 7 o $end
+$upscope $end
+$scope module dfr_1 $end
+$var wire 1 # clk $end
+$var wire 1 " reset $end
+$var wire 1 8 reset_ $end
+$var wire 1 5 out $end
+$var wire 1 4 in $end
+$var wire 1 9 df_in $end
+$scope module and2_0 $end
+$var wire 1 9 o $end
+$var wire 1 8 i1 $end
+$var wire 1 4 i0 $end
+$upscope $end
+$scope module df_0 $end
+$var wire 1 # clk $end
+$var wire 1 9 in $end
+$var wire 1 5 out $end
+$var reg 1 5 df_out $end
+$upscope $end
+$scope module invert_0 $end
+$var wire 1 " i $end
+$var wire 1 8 o $end
+$upscope $end
+$upscope $end
+$scope module or_1 $end
+$var wire 1 6 i0 $end
+$var wire 1 7 i1 $end
+$var wire 1 4 o $end
+$upscope $end
+$upscope $end
+$scope module piso_slice3 $end
+$var wire 1 " clear $end
+$var wire 1 # clk $end
+$var wire 1 % control $end
+$var wire 1 ( control_bar $end
+$var wire 1 : new $end
+$var wire 1 5 prev $end
+$var wire 1 ; or_output $end
+$var wire 1 ! data $end
+$scope module and_1 $end
+$var wire 1 5 i0 $end
+$var wire 1 % i1 $end
+$var wire 1 < o $end
+$upscope $end
+$scope module and_2 $end
+$var wire 1 : i0 $end
+$var wire 1 ( i1 $end
+$var wire 1 = o $end
+$upscope $end
+$scope module dfr_1 $end
+$var wire 1 # clk $end
+$var wire 1 " reset $end
+$var wire 1 > reset_ $end
+$var wire 1 ! out $end
+$var wire 1 ; in $end
+$var wire 1 ? df_in $end
+$scope module and2_0 $end
+$var wire 1 ? o $end
+$var wire 1 > i1 $end
+$var wire 1 ; i0 $end
+$upscope $end
+$scope module df_0 $end
+$var wire 1 # clk $end
+$var wire 1 ? in $end
+$var wire 1 ! out $end
+$var reg 1 @ df_out $end
+$upscope $end
+$scope module invert_0 $end
+$var wire 1 " i $end
+$var wire 1 > o $end
+$upscope $end
+$upscope $end
+$scope module or_1 $end
+$var wire 1 < i0 $end
+$var wire 1 = i1 $end
+$var wire 1 ; o $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+x@
+0?
+0>
+x=
+0<
+x;
+x:
+09
+08
+x7
+06
+x5
+x4
+x3
+02
+01
+x0
+0/
+x.
+x-
+x,
+0+
+0*
+x)
+1(
+x'
+bx &
+0%
+bx $
+0#
+1"
+x!
+$end
+#5
+0'
+0.
+05
+0!
+0@
+1-
+14
+0;
+10
+17
+0=
+1)
+1,
+13
+0:
+b1110 $
+b1110 &
+1#
+#6
+1+
+12
+19
+1*
+11
+18
+1>
+0"
+#10
+0#
+#15
+1?
+1;
+1<
+16
+1/
+15
+1.
+1'
+12
+19
+1-
+14
+00
+07
+1#
+0(
+1%
+#20
+0#
+#25
+1!
+1@
+1#
+#30
+0#
+#35
+1#
+#40
+0#
+#45
+1#
+#50
+0#
+#54
+0?
+0;
+10
+17
+0/
+06
+0<
+1(
+0%
+#55
+0!
+0@
+0+
+0)
+b110 $
+b110 &
+1#
+#60
+1?
+1;
+00
+07
+1/
+16
+1<
+0(
+1%
+0#
+#65
+02
+0-
+0/
+0'
+1!
+1@
+1#
+#70
+0#
+#75
+09
+04
+06
+0.
+1#
+#80
+0#
+#85
+0?
+0;
+0<
+05
+1#
+#90
+0#
+#95
+0!
+0@
+1#
+#100
+0#
+#104
+1?
+1;
+12
+19
+1+
+1=
+1-
+14
+1)
+1:
+10
+17
+b1111 $
+b1111 &
+1(
+0%
+#105
+1'
+1.
+15
+1!
+1@
+1#
+#106
+00
+07
+0=
+1/
+16
+1<
+0(
+1%
+#110
+0#
+#115
+1#
+#120
+0#
+#125
+1#
+#130
+0#
+#135
+1#
+#140
+0#
+#145
+1#
+#146

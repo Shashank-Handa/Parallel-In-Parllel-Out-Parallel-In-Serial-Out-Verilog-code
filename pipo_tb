@@ -1,0 +1,264 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1110-g18392a46)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 10;
+:vpi_module "C:\PROGRA~1\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\PROGRA~1\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\PROGRA~1\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\PROGRA~1\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\PROGRA~1\iverilog\lib\ivl\va_math.vpi";
+S_000002520778b020 .scope module, "pipo_tb" "pipo_tb" 2 3;
+ .timescale -9 -10;
+v00000252077eb490_0 .var "clk", 0 0;
+v00000252077eb530_0 .var "d", 3 0;
+v00000252077ebd50_0 .net "q", 3 0, L_00000252077ef6a0;  1 drivers
+v00000252077ebdf0_0 .var "rst", 0 0;
+S_000002520778b1b0 .scope module, "p_0" "pipo" 2 8, 3 22 0, S_000002520778b020;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "data";
+    .port_info 1 /INPUT 1 "reset";
+    .port_info 2 /INPUT 1 "clk";
+    .port_info 3 /OUTPUT 4 "out";
+v00000252077ea630_0 .net "clk", 0 0, v00000252077eb490_0;  1 drivers
+v00000252077ebcb0_0 .net "data", 3 0, v00000252077eb530_0;  1 drivers
+v00000252077eab30_0 .net "out", 3 0, L_00000252077ef6a0;  alias, 1 drivers
+v00000252077ec1b0_0 .net "reset", 0 0, v00000252077ebdf0_0;  1 drivers
+L_00000252077ebf30 .part v00000252077eb530_0, 0, 1;
+L_00000252077ec2f0 .part v00000252077eb530_0, 1, 1;
+L_00000252077ea4f0 .part v00000252077eb530_0, 2, 1;
+L_00000252077ede40 .part v00000252077eb530_0, 3, 1;
+L_00000252077ef6a0 .concat8 [ 1 1 1 1], v0000025207791710_0, v00000252077917b0_0, v00000252077eb990_0, v00000252077ebad0_0;
+S_000002520778b340 .scope module, "d0" "dfr" 3 24, 3 15 0, S_000002520778b1b0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "in";
+    .port_info 1 /INPUT 1 "reset";
+    .port_info 2 /INPUT 1 "clk";
+    .port_info 3 /OUTPUT 1 "out";
+v0000025207791990_0 .net "clk", 0 0, v00000252077eb490_0;  alias, 1 drivers
+v0000025207791e90_0 .net "df_in", 0 0, L_0000025207780650;  1 drivers
+v00000252077912b0_0 .net "in", 0 0, L_00000252077ebf30;  1 drivers
+v0000025207791cb0_0 .net "out", 0 0, v0000025207791710_0;  1 drivers
+v0000025207791030_0 .net "reset", 0 0, v00000252077ebdf0_0;  alias, 1 drivers
+v0000025207791530_0 .net "reset_", 0 0, L_00000252077ebe90;  1 drivers
+S_00000252075ce3b0 .scope module, "and2_0" "and2" 3 18, 3 5 0, S_000002520778b340;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "i0";
+    .port_info 1 /INPUT 1 "i1";
+    .port_info 2 /OUTPUT 1 "o";
+L_0000025207780650 .functor AND 1, L_00000252077ebf30, L_00000252077ebe90, C4<1>, C4<1>;
+v0000025207791170_0 .net "i0", 0 0, L_00000252077ebf30;  alias, 1 drivers
+v0000025207791490_0 .net "i1", 0 0, L_00000252077ebe90;  alias, 1 drivers
+v0000025207791670_0 .net "o", 0 0, L_0000025207780650;  alias, 1 drivers
+S_00000252075ce540 .scope module, "df_0" "df" 3 19, 3 9 0, S_000002520778b340;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "in";
+    .port_info 2 /OUTPUT 1 "out";
+v0000025207791ad0_0 .net "clk", 0 0, v00000252077eb490_0;  alias, 1 drivers
+v0000025207791710_0 .var "df_out", 0 0;
+v00000252077915d0_0 .net "in", 0 0, L_0000025207780650;  alias, 1 drivers
+v0000025207791210_0 .net "out", 0 0, v0000025207791710_0;  alias, 1 drivers
+E_0000025207793df0 .event posedge, v0000025207791ad0_0;
+S_00000252075ce6d0 .scope module, "invert_0" "invert" 3 17, 3 1 0, S_000002520778b340;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "i";
+    .port_info 1 /OUTPUT 1 "o";
+v0000025207791b70_0 .net "i", 0 0, v00000252077ebdf0_0;  alias, 1 drivers
+v0000025207791c10_0 .net "o", 0 0, L_00000252077ebe90;  alias, 1 drivers
+L_00000252077ebe90 .reduce/nor v00000252077ebdf0_0;
+S_0000025207786240 .scope module, "d1" "dfr" 3 26, 3 15 0, S_000002520778b1b0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "in";
+    .port_info 1 /INPUT 1 "reset";
+    .port_info 2 /INPUT 1 "clk";
+    .port_info 3 /OUTPUT 1 "out";
+v00000252077910d0_0 .net "clk", 0 0, v00000252077eb490_0;  alias, 1 drivers
+v00000252077eb210_0 .net "df_in", 0 0, L_00000252077808f0;  1 drivers
+v00000252077ea8b0_0 .net "in", 0 0, L_00000252077ec2f0;  1 drivers
+v00000252077eb2b0_0 .net "out", 0 0, v00000252077917b0_0;  1 drivers
+v00000252077ea950_0 .net "reset", 0 0, v00000252077ebdf0_0;  alias, 1 drivers
+v00000252077eaf90_0 .net "reset_", 0 0, L_00000252077ebfd0;  1 drivers
+S_00000252077863d0 .scope module, "and2_0" "and2" 3 18, 3 5 0, S_0000025207786240;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "i0";
+    .port_info 1 /INPUT 1 "i1";
+    .port_info 2 /OUTPUT 1 "o";
+L_00000252077808f0 .functor AND 1, L_00000252077ec2f0, L_00000252077ebfd0, C4<1>, C4<1>;
+v0000025207791f30_0 .net "i0", 0 0, L_00000252077ec2f0;  alias, 1 drivers
+v0000025207791350_0 .net "i1", 0 0, L_00000252077ebfd0;  alias, 1 drivers
+v0000025207791d50_0 .net "o", 0 0, L_00000252077808f0;  alias, 1 drivers
+S_0000025207786560 .scope module, "df_0" "df" 3 19, 3 9 0, S_0000025207786240;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "in";
+    .port_info 2 /OUTPUT 1 "out";
+v00000252077913f0_0 .net "clk", 0 0, v00000252077eb490_0;  alias, 1 drivers
+v00000252077917b0_0 .var "df_out", 0 0;
+v0000025207791a30_0 .net "in", 0 0, L_00000252077808f0;  alias, 1 drivers
+v0000025207791df0_0 .net "out", 0 0, v00000252077917b0_0;  alias, 1 drivers
+S_00000252075c6260 .scope module, "invert_0" "invert" 3 17, 3 1 0, S_0000025207786240;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "i";
+    .port_info 1 /OUTPUT 1 "o";
+v0000025207791850_0 .net "i", 0 0, v00000252077ebdf0_0;  alias, 1 drivers
+v00000252077918f0_0 .net "o", 0 0, L_00000252077ebfd0;  alias, 1 drivers
+L_00000252077ebfd0 .reduce/nor v00000252077ebdf0_0;
+S_00000252075c63f0 .scope module, "d2" "dfr" 3 28, 3 15 0, S_000002520778b1b0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "in";
+    .port_info 1 /INPUT 1 "reset";
+    .port_info 2 /INPUT 1 "clk";
+    .port_info 3 /OUTPUT 1 "out";
+v00000252077eb350_0 .net "clk", 0 0, v00000252077eb490_0;  alias, 1 drivers
+v00000252077eb7b0_0 .net "df_in", 0 0, L_0000025207780500;  1 drivers
+v00000252077eabd0_0 .net "in", 0 0, L_00000252077ea4f0;  1 drivers
+v00000252077ead10_0 .net "out", 0 0, v00000252077eb990_0;  1 drivers
+v00000252077ea9f0_0 .net "reset", 0 0, v00000252077ebdf0_0;  alias, 1 drivers
+v00000252077eb850_0 .net "reset_", 0 0, L_00000252077ec390;  1 drivers
+S_00000252075c6580 .scope module, "and2_0" "and2" 3 18, 3 5 0, S_00000252075c63f0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "i0";
+    .port_info 1 /INPUT 1 "i1";
+    .port_info 2 /OUTPUT 1 "o";
+L_0000025207780500 .functor AND 1, L_00000252077ea4f0, L_00000252077ec390, C4<1>, C4<1>;
+v00000252077ea810_0 .net "i0", 0 0, L_00000252077ea4f0;  alias, 1 drivers
+v00000252077eb5d0_0 .net "i1", 0 0, L_00000252077ec390;  alias, 1 drivers
+v00000252077eb8f0_0 .net "o", 0 0, L_0000025207780500;  alias, 1 drivers
+S_0000025207784cb0 .scope module, "df_0" "df" 3 19, 3 9 0, S_00000252075c63f0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "in";
+    .port_info 2 /OUTPUT 1 "out";
+v00000252077eb170_0 .net "clk", 0 0, v00000252077eb490_0;  alias, 1 drivers
+v00000252077eb990_0 .var "df_out", 0 0;
+v00000252077eadb0_0 .net "in", 0 0, L_0000025207780500;  alias, 1 drivers
+v00000252077eac70_0 .net "out", 0 0, v00000252077eb990_0;  alias, 1 drivers
+S_0000025207784e40 .scope module, "invert_0" "invert" 3 17, 3 1 0, S_00000252075c63f0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "i";
+    .port_info 1 /OUTPUT 1 "o";
+v00000252077ea6d0_0 .net "i", 0 0, v00000252077ebdf0_0;  alias, 1 drivers
+v00000252077eb670_0 .net "o", 0 0, L_00000252077ec390;  alias, 1 drivers
+L_00000252077ec390 .reduce/nor v00000252077ebdf0_0;
+S_0000025207784fd0 .scope module, "d3" "dfr" 3 30, 3 15 0, S_000002520778b1b0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "in";
+    .port_info 1 /INPUT 1 "reset";
+    .port_info 2 /INPUT 1 "clk";
+    .port_info 3 /OUTPUT 1 "out";
+v00000252077eb3f0_0 .net "clk", 0 0, v00000252077eb490_0;  alias, 1 drivers
+v00000252077eb030_0 .net "df_in", 0 0, L_0000025207780960;  1 drivers
+v00000252077ec070_0 .net "in", 0 0, L_00000252077ede40;  1 drivers
+v00000252077eb0d0_0 .net "out", 0 0, v00000252077ebad0_0;  1 drivers
+v00000252077eaa90_0 .net "reset", 0 0, v00000252077ebdf0_0;  alias, 1 drivers
+v00000252077ebc10_0 .net "reset_", 0 0, L_00000252077ea590;  1 drivers
+S_00000252077ec4b0 .scope module, "and2_0" "and2" 3 18, 3 5 0, S_0000025207784fd0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "i0";
+    .port_info 1 /INPUT 1 "i1";
+    .port_info 2 /OUTPUT 1 "o";
+L_0000025207780960 .functor AND 1, L_00000252077ede40, L_00000252077ea590, C4<1>, C4<1>;
+v00000252077eaef0_0 .net "i0", 0 0, L_00000252077ede40;  alias, 1 drivers
+v00000252077eba30_0 .net "i1", 0 0, L_00000252077ea590;  alias, 1 drivers
+v00000252077eb710_0 .net "o", 0 0, L_0000025207780960;  alias, 1 drivers
+S_00000252077ec640 .scope module, "df_0" "df" 3 19, 3 9 0, S_0000025207784fd0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "in";
+    .port_info 2 /OUTPUT 1 "out";
+v00000252077eae50_0 .net "clk", 0 0, v00000252077eb490_0;  alias, 1 drivers
+v00000252077ebad0_0 .var "df_out", 0 0;
+v00000252077ebb70_0 .net "in", 0 0, L_0000025207780960;  alias, 1 drivers
+v00000252077ea770_0 .net "out", 0 0, v00000252077ebad0_0;  alias, 1 drivers
+S_00000252077ed310 .scope module, "invert_0" "invert" 3 17, 3 1 0, S_0000025207784fd0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "i";
+    .port_info 1 /OUTPUT 1 "o";
+v00000252077ec250_0 .net "i", 0 0, v00000252077ebdf0_0;  alias, 1 drivers
+v00000252077ec110_0 .net "o", 0 0, L_00000252077ea590;  alias, 1 drivers
+L_00000252077ea590 .reduce/nor v00000252077ebdf0_0;
+    .scope S_00000252075ce540;
+T_0 ;
+    %wait E_0000025207793df0;
+    %load/vec4 v00000252077915d0_0;
+    %assign/vec4 v0000025207791710_0, 0;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_0000025207786560;
+T_1 ;
+    %wait E_0000025207793df0;
+    %load/vec4 v0000025207791a30_0;
+    %assign/vec4 v00000252077917b0_0, 0;
+    %jmp T_1;
+    .thread T_1;
+    .scope S_0000025207784cb0;
+T_2 ;
+    %wait E_0000025207793df0;
+    %load/vec4 v00000252077eadb0_0;
+    %assign/vec4 v00000252077eb990_0, 0;
+    %jmp T_2;
+    .thread T_2;
+    .scope S_00000252077ec640;
+T_3 ;
+    %wait E_0000025207793df0;
+    %load/vec4 v00000252077ebb70_0;
+    %assign/vec4 v00000252077ebad0_0, 0;
+    %jmp T_3;
+    .thread T_3;
+    .scope S_000002520778b020;
+T_4 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000252077eb490_0, 0, 1;
+T_4.0 ;
+    %delay 50, 0;
+    %load/vec4 v00000252077eb490_0;
+    %inv;
+    %store/vec4 v00000252077eb490_0, 0, 1;
+    %jmp T_4.0;
+    %end;
+    .thread T_4;
+    .scope S_000002520778b020;
+T_5 ;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000252077ebdf0_0, 0, 1;
+    %delay 120, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000252077ebdf0_0, 0, 1;
+    %end;
+    .thread T_5;
+    .scope S_000002520778b020;
+T_6 ;
+    %delay 100, 0;
+    %pushi/vec4 0, 0, 4;
+    %store/vec4 v00000252077eb530_0, 0, 4;
+    %delay 100, 0;
+    %pushi/vec4 1, 0, 4;
+    %store/vec4 v00000252077eb530_0, 0, 4;
+    %delay 100, 0;
+    %pushi/vec4 3, 0, 4;
+    %store/vec4 v00000252077eb530_0, 0, 4;
+    %delay 100, 0;
+    %pushi/vec4 7, 0, 4;
+    %store/vec4 v00000252077eb530_0, 0, 4;
+    %delay 100, 0;
+    %pushi/vec4 6, 0, 4;
+    %store/vec4 v00000252077eb530_0, 0, 4;
+    %delay 100, 0;
+    %pushi/vec4 10, 0, 4;
+    %store/vec4 v00000252077eb530_0, 0, 4;
+    %delay 4000, 0;
+    %vpi_call 2 29 "$finish" {0 0 0};
+    %end;
+    .thread T_6;
+    .scope S_000002520778b020;
+T_7 ;
+    %vpi_call 2 34 "$dumpfile", "pipodmp.vcd" {0 0 0};
+    %vpi_call 2 35 "$dumpvars", 32'sb00000000000000000000000000000000, S_000002520778b020 {0 0 0};
+    %end;
+    .thread T_7;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    ".\pipo_tb.v";
+    ".\pipo.v";
